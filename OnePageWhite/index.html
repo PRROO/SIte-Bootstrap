@@ -1,3 +1,6 @@
+
+<!-- Pne Page BOOTSTRAP WHITE -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -90,7 +93,16 @@
 
 <!-- SCRIPT SCROLL ANIMATE------------------>
 
-<script src="scroll-nav.js"></script>
+<script>
+$(document).ready(function() {
+  $('a[href^="#"]').click(function() {
+    var ou = $(this).attr("href").substr(1);
+    var saut = $("[id='"+ ou +"']");
+    $('html,body').animate({scrollTop: $(saut).offset().top}, 1500);
+    return false;
+  });
+});
+</script>
 
   </body>
 </html>
